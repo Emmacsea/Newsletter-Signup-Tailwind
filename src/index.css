@@ -1,0 +1,24 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.inp {
+  @apply text-neutral-charcoalgrey outline-none mt-2 text-lg font-medium w-full rounded-md px-4 py-2 border-2  
+}
+
+.inp:active,
+.inp:focus {
+  @apply border-neutral-charcoalgrey
+}
+
+.btn {
+  @apply bg-neutral-charcoalgrey text-neutral-white text-base font-medium rounded-md text-center mt-4 mb-6 w-full py-3 
+}
+
+.btn:hover {
+  @apply shadow-primary-tomato bg-primary-tomato shadow-md 
+}
+
