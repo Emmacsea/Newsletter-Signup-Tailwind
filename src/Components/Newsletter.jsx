@@ -1,5 +1,6 @@
 import { useState } from "react";
-import signup from "../assets/assets/images/illustration-sign-up-desktop.svg";
+import signupdesktop from "../assets/assets/images/illustration-sign-up-desktop.svg";
+import signupmobile from "../assets/assets/images/illustration-sign-up-mobile.svg";
 import list from "../assets/assets/images/icon-list.svg";
 import PropTypes from 'prop-types';
 
@@ -30,30 +31,30 @@ export default function Newsletter ({
 
 
     return (
-        <div className="bg-neutral-dslategrey flex justify-center items-center h-screen w-full">
-            <div className="flex justify-center items-center bg-neutral-white rounded-lg h-auto w-auto">
-                <div className="w-3/5 py-8 px-12">
-                    <h2 className="text-neutral-charcoalgrey text-5xl font-bold mb-4 ">Stay updated!</h2>
+        <div className="bg-neutral-dslategrey flex justify-center items-center md:h-screen h-full md:px-0 md:py-0 px-10 py-3">
+            <div className="flex md:flex-row flex-col-reverse justify-center items-center bg-neutral-white md:rounded-lg rounded-none h-auto w-auto">
+                <div className="md:w-3/5 md:py-8 md:px-12 px-4">
+                    <h2 className="text-neutral-charcoalgrey md:text-5xl text-4xl font-bold mb-4 md:mt-0 mt-4 ">Stay updated!</h2>
                     <p className="text-neutral-charcoalgrey text-base font-medium mb-3">Join 60,000+ products managers receiving monthly updates on: </p>
-                    <div className="flex flex-col space-y-2">
-                        <div className="flex  items-center gap-3">
-                            <div><img className="w-4" src={list} alt="" /></div>
+                    <div className="flex flex-col space-y-2 items-start ">
+                        <div className="flex md:gap-3 space-x-3">
+                            <div><img className="md:w-4 md:h-4 w-6 h-6" src={list} alt="" /></div>
                             <p className="text-neutral-charcoalgrey text-base font-medium">Product discovery and building what matters</p>
                         </div>
-                        <div className="flex  items-center gap-3">
-                            <div><img className="w-4" src={list} alt="" /></div>
+                        <div className="flex md:gap-3 space-x-3">
+                        <div><img className="md:w-4 md:h-4 w-6 h-6" src={list} alt="" /></div>
                             <p className="text-neutral-charcoalgrey text-base font-medium">Measuring to ensure updates are a success</p>
                         </div>
-                        <div className="flex  items-center gap-3">
-                            <div><img className="w-4" src={list} alt="" /></div>
+                        <div className="flex md:gap-3  space-x-3">
+                        <div><img className="md:w-4 md:h-4 w-5 h-5" src={list} alt="" /></div>
                             <p className="text-neutral-charcoalgrey text-base font-medium">And much more!</p>
                         </div>
 
                     </div>
                         <form action="" onSubmit={submitEmail} method="get">
-                            <div className="mt-2">
+                            <div className="md:mt-2 mt-7">
                                 <div className="flex justify-between items-center">
-                                <label htmlFor="" className="text-neutral-charcoalgrey text-base font-medium ">Email address</label>
+                                <label htmlFor="" className="text-neutral-charcoalgrey md:text-base text-sm md:font-medium font-bold">Email address</label>
                                 {error && (
                                     <p className="text-primary-tomato text-sm font-medium">{error}</p>
                                 )}
@@ -71,8 +72,9 @@ export default function Newsletter ({
                         </form>
 
                 </div>
-                <div className="w-2/5">
-                    <img className='h-96' src={signup} alt="" />
+                <div className="md:w-2/5 w-full ">
+                    <img className='md:block hidden md:h-96' src={signupdesktop} alt="" />
+                    <img className='md:hidden blockmd:h-96' src={signupmobile} alt="" />
                 </div>
 
             </div>
